@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Grounded: Realistic Stats Overhaul</name>
+  <author>DrSeedon</author>
+  <url></url>
+  <supportedVersions>
+    <li>1.6</li>
+  </supportedVersions>
+  <packageId>seedon.grounded</packageId>
+  <modVersion>1.0.0</modVersion>
+  <description>Grounded brings real-world biology and agriculture into RimWorld — without breaking gameplay.
+
+Animals get realistic stats derived from zoological data: body size, speed, lifespan, gestation, litter size, diet, temperature tolerance, meat and leather yields. 59 vanilla animals + DLC + Vanilla Animals Expanded fully covered.
+
+Crops get differentiated economics: potatoes yield more but rot fast and weigh heavy. Rice stores well but needs warmth. Strawberries are luxury goods that spoil in days. Corn remains the lazy farmer's gold standard.
+
+No Harmony. No DLL. No behavior changes. Pure XML — install, play, forget.
+
+Compatible with: Combat Extended, Vanilla Animals Expanded, Alpha Animals, DLC Biotech + Odyssey.</description>
+  <modIconPath IgnoreIfNoMatchingField="True">UI/Icons/Grounded_ModIcon</modIconPath>
+</ModMetaData>

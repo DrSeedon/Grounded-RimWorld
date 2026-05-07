@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <!-- ===================== -->
+  <!-- Crepuscular (defName) -->
+  <!-- ===================== -->
+
+  <!-- Cassowary -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName='Cassowary']/modExtensions/li[@Class='VEF.AnimalBehaviours.ExtendedRaceProperties']</xpath>
+    <nomatch Class="PatchOperationAddModExtension">
+      <xpath>Defs/ThingDef[defName='Cassowary']</xpath>
+      <value>
+        <li Class="VEF.AnimalBehaviours.ExtendedRaceProperties">
+          <bodyClock>Crepuscular</bodyClock>
+        </li>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <!-- Chinchilla -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName='Chinchilla']/modExtensions/li[@Class='VEF.AnimalBehaviours.ExtendedRaceProperties']</xpath>
+    <nomatch Class="PatchOperationAddModExtension">
+      <xpath>Defs/ThingDef[defName='Chinchilla']</xpath>
+      <value>
+        <li Class="VEF.AnimalBehaviours.ExtendedRaceProperties">
+          <bodyClock>Crepuscular</bodyClock>
+        </li>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <!-- Deer -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName='Deer']/modExtensions/li[@Class='VEF.AnimalBehaviours.ExtendedRaceProperties']</xpath>
+    <nomatch Class="PatchOperationAddModExtension">
+      <xpath>Defs/ThingDef[defName='Deer']</xpath>
+      <value>
+        <li Class="VEF.AnimalBehaviours.ExtendedRaceProperties">
+          <bodyClock>Crepuscular</bodyClock>
+        </li>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <!-- Elk -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName='Elk']/modExtensions/li[@Class='VEF.AnimalBehaviours.ExtendedRaceProperties']</xpath>
+    <nomatch Class="PatchOperationAddModExtension">
+      <xpath>Defs/ThingDef[defName='Elk']</xpath>
+      <value>
+        <li Class="VEF.AnimalBehaviours.ExtendedRaceProperties">
+          <bodyClock>Crepuscular</bodyClock>
+        </li>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <!-- Warg -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName='Warg']/modExtensions/li[@Class='VEF.AnimalBehaviours.ExtendedRaceProperties']</xpath>
+    <nomatch Class="PatchOperationAddModExtension">
+      <xpath>Defs/ThingDef[defName='Warg']</xpath>
+      <value>
+        <li Class="VEF.AnimalBehaviours.ExtendedRaceProperties">
+          <bodyClock>Crepuscular</bodyClock>
+        </li>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <!-- ===================== -->
+  <!-- Crepuscular (@Name)   -->
+  <!-- ===================== -->
+
+  <!-- BaseHare -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[@Name='BaseHare']/modExtensions/li[@Class='VEF.AnimalBehaviours.ExtendedRaceProperties']</xpath>
+    <nomatch Class="PatchOperationAddModExtension">
+      <xpath>Defs/ThingDef[@Name='BaseHare']</xpath>
+      <value>
+        <li Class="VEF.AnimalBehaviours.ExtendedRaceProperties">
+          <bodyClock>Crepuscular</bodyClock>
+        </li>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <!-- ThingBaseWolf -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[@Name='ThingBaseWolf']/modExtensions/li[@Class='VEF.AnimalBehaviours.ExtendedRaceProperties']</xpath>
+    <nomatch Class="PatchOperationAddModExtension">
+      <xpath>Defs/ThingDef[@Name='ThingBaseWolf']</xpath>
+      <value>
+        <li Class="VEF.AnimalBehaviours.ExtendedRaceProperties">
+          <bodyClock>Crepuscular</bodyClock>
+        </li>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <!-- ThingBaseFox -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[@Name='ThingBaseFox']/modExtensions/li[@Class='VEF.AnimalBehaviours.ExtendedRaceProperties']</xpath>
+    <nomatch Class="PatchOperationAddModExtension">
+      <xpath>Defs/ThingDef[@Name='ThingBaseFox']</xpath>
+      <value>
+        <li Class="VEF.AnimalBehaviours.ExtendedRaceProperties">
+          <bodyClock>Crepuscular</bodyClock>
+        </li>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <!-- ===================== -->
+  <!-- Nocturnal             -->
+  <!-- ===================== -->
+
+  <!-- Cat -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName='Cat']/modExtensions/li[@Class='VEF.AnimalBehaviours.ExtendedRaceProperties']</xpath>
+    <nomatch Class="PatchOperationAddModExtension">
+      <xpath>Defs/ThingDef[defName='Cat']</xpath>
+      <value>
+        <li Class="VEF.AnimalBehaviours.ExtendedRaceProperties">
+          <bodyClock>Nocturnal</bodyClock>
+        </li>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <!-- Lynx -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName='Lynx']/modExtensions/li[@Class='VEF.AnimalBehaviours.ExtendedRaceProperties']</xpath>
+    <nomatch Class="PatchOperationAddModExtension">
+      <xpath>Defs/ThingDef[defName='Lynx']</xpath>
+      <value>
+        <li Class="VEF.AnimalBehaviours.ExtendedRaceProperties">
+          <bodyClock>Nocturnal</bodyClock>
+        </li>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <!-- Cougar -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName='Cougar']/modExtensions/li[@Class='VEF.AnimalBehaviours.ExtendedRaceProperties']</xpath>
+    <nomatch Class="PatchOperationAddModExtension">
+      <xpath>Defs/ThingDef[defName='Cougar']</xpath>
+      <value>
+        <li Class="VEF.AnimalBehaviours.ExtendedRaceProperties">
+          <bodyClock>Nocturnal</bodyClock>
+        </li>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <!-- Panther -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName='Panther']/modExtensions/li[@Class='VEF.AnimalBehaviours.ExtendedRaceProperties']</xpath>
+    <nomatch Class="PatchOperationAddModExtension">
+      <xpath>Defs/ThingDef[defName='Panther']</xpath>
+      <value>
+        <li Class="VEF.AnimalBehaviours.ExtendedRaceProperties">
+          <bodyClock>Nocturnal</bodyClock>
+        </li>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <!-- Megasloth -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName='Megasloth']/modExtensions/li[@Class='VEF.AnimalBehaviours.ExtendedRaceProperties']</xpath>
+    <nomatch Class="PatchOperationAddModExtension">
+      <xpath>Defs/ThingDef[defName='Megasloth']</xpath>
+      <value>
+        <li Class="VEF.AnimalBehaviours.ExtendedRaceProperties">
+          <bodyClock>Nocturnal</bodyClock>
+        </li>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <!-- WildBoar -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName='WildBoar']/modExtensions/li[@Class='VEF.AnimalBehaviours.ExtendedRaceProperties']</xpath>
+    <nomatch Class="PatchOperationAddModExtension">
+      <xpath>Defs/ThingDef[defName='WildBoar']</xpath>
+      <value>
+        <li Class="VEF.AnimalBehaviours.ExtendedRaceProperties">
+          <bodyClock>Nocturnal</bodyClock>
+        </li>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <!-- Rat -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName='Rat']/modExtensions/li[@Class='VEF.AnimalBehaviours.ExtendedRaceProperties']</xpath>
+    <nomatch Class="PatchOperationAddModExtension">
+      <xpath>Defs/ThingDef[defName='Rat']</xpath>
+      <value>
+        <li Class="VEF.AnimalBehaviours.ExtendedRaceProperties">
+          <bodyClock>Nocturnal</bodyClock>
+        </li>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <!-- Boomrat -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName='Boomrat']/modExtensions/li[@Class='VEF.AnimalBehaviours.ExtendedRaceProperties']</xpath>
+    <nomatch Class="PatchOperationAddModExtension">
+      <xpath>Defs/ThingDef[defName='Boomrat']</xpath>
+      <value>
+        <li Class="VEF.AnimalBehaviours.ExtendedRaceProperties">
+          <bodyClock>Nocturnal</bodyClock>
+        </li>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <!-- Alphabeaver -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName='Alphabeaver']/modExtensions/li[@Class='VEF.AnimalBehaviours.ExtendedRaceProperties']</xpath>
+    <nomatch Class="PatchOperationAddModExtension">
+      <xpath>Defs/ThingDef[defName='Alphabeaver']</xpath>
+      <value>
+        <li Class="VEF.AnimalBehaviours.ExtendedRaceProperties">
+          <bodyClock>Nocturnal</bodyClock>
+        </li>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <!-- Raccoon -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName='Raccoon']/modExtensions/li[@Class='VEF.AnimalBehaviours.ExtendedRaceProperties']</xpath>
+    <nomatch Class="PatchOperationAddModExtension">
+      <xpath>Defs/ThingDef[defName='Raccoon']</xpath>
+      <value>
+        <li Class="VEF.AnimalBehaviours.ExtendedRaceProperties">
+          <bodyClock>Nocturnal</bodyClock>
+        </li>
+      </value>
+    </nomatch>
+  </Operation>
+
+</Patch>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!-- ============================================= -->
+  <!-- Grounded: Realistic Crop Balance          -->
+  <!-- Nutrition stays 0.05 for all (cooking compat) -->
+  <!-- Changes: yield, rot, mass, temperature, price -->
+  <!-- ============================================= -->
+
+
+  <!-- ===================== -->
+  <!-- POTATO: Yield king, rots fast, heavy -->
+  <!-- IRL: 15.6M kcal/hectare, #1 crop by yield, stores 3-6 months in cellar -->
+  <!-- ===================== -->
+
+  <!-- Yield 11 → 14 (IRL potato = highest yield per area) -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="Plant_Potato"]/plant/harvestYield</xpath>
+    <value>
+      <harvestYield>14</harvestYield>
+    </value>
+  </Operation>
+
+  <!-- Rot: 30 → 14 days (potatoes sprout and rot without cold storage) -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="RawPotatoes"]/comps/li[@Class="CompProperties_Rottable"]/daysToRotStart</xpath>
+    <value>
+      <daysToRotStart>14</daysToRotStart>
+    </value>
+  </Operation>
+
+  <!-- Mass: 0.03 → 0.05 (potatoes are heavy, water-dense) -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/ThingDef[defName="RawPotatoes"]/statBases/Mass</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/ThingDef[defName="RawPotatoes"]/statBases/Mass</xpath>
+      <value>
+        <Mass>0.05</Mass>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[defName="RawPotatoes"]/statBases</xpath>
+      <value>
+        <Mass>0.05</Mass>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <!-- MinGrowTemp: default → 2°C (potatoes survive near-frost, IRL planted early spring) -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/ThingDef[defName="Plant_Potato"]/plant/minGrowTemperature</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/ThingDef[defName="Plant_Potato"]/plant/minGrowTemperature</xpath>
+      <value>
+        <minGrowTemperature>2</minGrowTemperature>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[defName="Plant_Potato"]/plant</xpath>
+      <value>
+        <minGrowTemperature>2</minGrowTemperature>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <!-- MarketValue: 1.1 → 0.9 (cheap staple, peasant food) -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="RawPotatoes"]/statBases/MarketValue</xpath>
+    <value>
+      <MarketValue>0.9</MarketValue>
+    </value>
+  </Operation>
+
+
+  <!-- ===================== -->
+  <!-- RICE: Light, stores well, needs warmth -->
+  <!-- IRL: 6M kcal/hectare, very labor-intensive, tropical/subtropical -->
+  <!-- ===================== -->
+
+  <!-- Mass: 0.03 → 0.02 (dry grain, light) -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/ThingDef[defName="RawRice"]/statBases/Mass</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/ThingDef[defName="RawRice"]/statBases/Mass</xpath>
+      <value>
+        <Mass>0.02</Mass>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[defName="RawRice"]/statBases</xpath>
+      <value>
+        <Mass>0.02</Mass>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <!-- MinGrowTemp: default → 12°C (rice is tropical, needs warmth) -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/ThingDef[defName="Plant_Rice"]/plant/minGrowTemperature</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/ThingDef[defName="Plant_Rice"]/plant/minGrowTemperature</xpath>
+      <value>
+        <minGrowTemperature>12</minGrowTemperature>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[defName="Plant_Rice"]/plant</xpath>
+      <value>
+        <minGrowTemperature>12</minGrowTemperature>
+      </value>
+    </nomatch>
+  </Operation>
+
+
+  <!-- ===================== -->
+  <!-- STRAWBERRY: Delicacy, rots very fast -->
+  <!-- IRL: 0.5M kcal/hectare, 3-5 days shelf life -->
+  <!-- ===================== -->
+
+  <!-- Rot: 14 → 7 days (berries spoil fast IRL) -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="RawBerries"]/comps/li[@Class="CompProperties_Rottable"]/daysToRotStart</xpath>
+    <value>
+      <daysToRotStart>7</daysToRotStart>
+    </value>
+  </Operation>
+
+  <!-- MarketValue: 1.2 → 1.5 (premium fruit, luxury food) -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="RawBerries"]/statBases/MarketValue</xpath>
+    <value>
+      <MarketValue>1.5</MarketValue>
+    </value>
+  </Operation>
+
+
+  <!-- ===================== -->
+  <!-- CORN: No changes needed -->
+  <!-- Already well balanced: long grow, high yield, 60 day storage -->
+  <!-- IRL: 9M kcal/hectare, low labor, stores 1-2 years dry -->
+  <!-- ===================== -->
+  <!-- Corn is the gold standard — everything else balanced around it -->
+
+</Patch>
