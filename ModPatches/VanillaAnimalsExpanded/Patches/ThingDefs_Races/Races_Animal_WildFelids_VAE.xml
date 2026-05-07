@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <Patch>
-  <!---->
-  <!-- AEXP_Cheetah -->
+  
+  
   <Operation Class="PatchOperationAttributeSet">
     <xpath>/Defs/ThingDef[defName = "AEXP_Cheetah"]</xpath>
     <attribute>ParentName</attribute>
@@ -12,13 +12,13 @@
     <attribute>ParentName</attribute>
     <value>BigCatKindBase</value>
   </Operation>
-  <!-- AEXP_Cheetah StatBases -->
+  
   <Operation Class="PatchOperationConditional">
     <xpath>/Defs/ThingDef[defName = "AEXP_Cheetah"]/statBases</xpath>
     <nomatch Class="PatchOperationAdd">
       <xpath>/Defs/ThingDef[defName = "AEXP_Cheetah"]</xpath>
       <value>
-        <statBases/>
+        <statBases />
       </value>
     </nomatch>
   </Operation>
@@ -130,7 +130,7 @@
       <xpath>/Defs/ThingDef[defName = "AEXP_Cheetah"]/statBases/ToxicEnvironmentResistance</xpath>
     </match>
   </Operation>
-  <!-- AEXP_Cheetah tools -->
+  
   <Operation Class="PatchOperationConditional">
     <xpath>/Defs/ThingDef[defName = "AEXP_Cheetah"]/tools</xpath>
     <match Class="PatchOperationRemove">
@@ -208,13 +208,13 @@
       </tools>
     </value>
   </Operation>
-  <!-- AEXP_Cheetah RaceProperties -->
+  
   <Operation Class="PatchOperationConditional">
     <xpath>/Defs/ThingDef[defName = "AEXP_Cheetah"]/race</xpath>
     <nomatch Class="PatchOperationAdd">
       <xpath>/Defs/ThingDef[defName = "AEXP_Cheetah"]</xpath>
       <value>
-        <race/>
+        <race />
       </value>
     </nomatch>
   </Operation>
@@ -544,7 +544,7 @@
       <xpath>/Defs/ThingDef[defName = "AEXP_Cheetah"]/tradeTags</xpath>
     </match>
   </Operation>
-  <!-- AEXP_Cheetah PawnKindDef -->
+  
   <Operation Class="PatchOperationConditional">
     <xpath>/Defs/PawnKindDef[defName = "AEXP_Cheetah"]/combatPower</xpath>
     <match Class="PatchOperationReplace">
@@ -593,7 +593,7 @@
       <xpath>/Defs/PawnKindDef[defName = "AEXP_Cheetah"]/moveSpeedFactorByTerrainTag/li[key = 'Water']</xpath>
     </match>
   </Operation>
-  <!-- AEXP_Lion -->
+  
   <Operation Class="PatchOperationAttributeSet">
     <xpath>/Defs/ThingDef[defName = "AEXP_Lion"]</xpath>
     <attribute>ParentName</attribute>
@@ -604,7 +604,7 @@
     <attribute>ParentName</attribute>
     <value>AnimalKindBase</value>
   </Operation>
-  <!-- AEXP_Lion StatBases -->
+  
   <Operation Class="PatchOperationConditional">
     <xpath>/Defs/ThingDef[defName = "AEXP_Lion"]/statBases/MarketValue</xpath>
     <match Class="PatchOperationReplace">
@@ -713,7 +713,7 @@
       <xpath>/Defs/ThingDef[defName = "AEXP_Lion"]/statBases/ToxicEnvironmentResistance</xpath>
     </match>
   </Operation>
-  <!-- AEXP_Lion tools -->
+  
   <Operation Class="PatchOperationConditional">
     <xpath>/Defs/ThingDef[defName = "AEXP_Lion"]/tools</xpath>
     <match Class="PatchOperationRemove">
@@ -791,7 +791,7 @@
       </tools>
     </value>
   </Operation>
-  <!-- AEXP_Lion RaceProperties -->
+  
   <Operation Class="PatchOperationConditional">
     <xpath>/Defs/ThingDef[defName = "AEXP_Lion"]/race/baseBodySize</xpath>
     <match Class="PatchOperationReplace">
@@ -1142,7 +1142,7 @@
         <def>AnimalJuvenile</def>
       </value>
     </match>
-    <nomatch/>
+    <nomatch />
   </Operation>
   <Operation Class="PatchOperationConditional">
     <xpath>/Defs/ThingDef[defName = "AEXP_Lion"]/race/lifeStageAges/li[3]</xpath>
@@ -1152,7 +1152,7 @@
         <def>AnimalAdult</def>
       </value>
     </match>
-    <nomatch/>
+    <nomatch />
   </Operation>
   <Operation Class="PatchOperationConditional">
     <xpath>/Defs/ThingDef[defName = "AEXP_Lion"]/race/lifeStageAges/li[2]</xpath>
@@ -1162,7 +1162,7 @@
         <minAge>0.2</minAge>
       </value>
     </match>
-    <nomatch/>
+    <nomatch />
   </Operation>
   <Operation Class="PatchOperationConditional">
     <xpath>/Defs/ThingDef[defName = "AEXP_Lion"]/race/lifeStageAges/li[3]</xpath>
@@ -1172,7 +1172,7 @@
         <minAge>0.4</minAge>
       </value>
     </match>
-    <nomatch/>
+    <nomatch />
   </Operation>
   <Operation Class="PatchOperationConditional">
     <xpath>/Defs/ThingDef[defName = "AEXP_Lion"]/race/litterSizeCurve</xpath>
@@ -1255,9 +1255,216 @@
       </value>
     </nomatch>
   </Operation>
-  <Operation Class="PatchOperationAddModExtension">
-    <xpath>/Defs/ThingDef[defName = "AEXP_Lion"]</xpath>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName = "AEXP_Lion"]/combatPower</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName = "AEXP_Lion"]/combatPower</xpath>
+      <value>
+        <combatPower>205</combatPower>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName = "AEXP_Lion"]</xpath>
+      <value>
+        <combatPower>205</combatPower>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName = "AEXP_Lion"]/ecoSystemWeight</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName = "AEXP_Lion"]/ecoSystemWeight</xpath>
+      <value>
+        <ecoSystemWeight>1</ecoSystemWeight>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName = "AEXP_Lion"]</xpath>
+      <value>
+        <ecoSystemWeight>1</ecoSystemWeight>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName = "AEXP_Lion"]/canArriveManhunter</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName = "AEXP_Lion"]/canArriveManhunter</xpath>
+      <value>
+        <canArriveManhunter>true</canArriveManhunter>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName = "AEXP_Lion"]</xpath>
+      <value>
+        <canArriveManhunter>true</canArriveManhunter>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName = "AEXP_Lion"]/wildGroupSize</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName = "AEXP_Lion"]/wildGroupSize</xpath>
+      <value>
+        <wildGroupSize>2~6</wildGroupSize>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName = "AEXP_Lion"]</xpath>
+      <value>
+        <wildGroupSize>2~6</wildGroupSize>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName = "AEXP_Lion"]/moveSpeedFactorByTerrainTag/li[key = 'Water']</xpath>
+    <match Class="PatchOperationRemove">
+      <xpath>/Defs/PawnKindDef[defName = "AEXP_Lion"]/moveSpeedFactorByTerrainTag/li[key = 'Water']</xpath>
+    </match>
+  </Operation>
+  
+  <Operation Class="PatchOperationAttributeSet">
+    <xpath>/Defs/ThingDef[defName = "AEXP_Jaguar"]</xpath>
+    <attribute>ParentName</attribute>
+    <value>BigCatThingBase</value>
+  </Operation>
+  <Operation Class="PatchOperationAttributeSet">
+    <xpath>/Defs/PawnKindDef[defName = "AEXP_Jaguar"]</xpath>
+    <attribute>ParentName</attribute>
+    <value>BigCatKindBase</value>
+  </Operation>
+  
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/ThingDef[defName = "AEXP_Jaguar"]/statBases</xpath>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[defName = "AEXP_Jaguar"]</xpath>
+      <value>
+        <statBases />
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/ThingDef[defName = "AEXP_Jaguar"]/statBases/MarketValue</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/ThingDef[defName = "AEXP_Jaguar"]/statBases/MarketValue</xpath>
+      <value>
+        <MarketValue>625</MarketValue>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[defName = "AEXP_Jaguar"]/statBases</xpath>
+      <value>
+        <MarketValue>625</MarketValue>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/ThingDef[defName = "AEXP_Jaguar"]/statBases/MoveSpeed</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/ThingDef[defName = "AEXP_Jaguar"]/statBases/MoveSpeed</xpath>
+      <value>
+        <MoveSpeed>7.5</MoveSpeed>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[defName = "AEXP_Jaguar"]/statBases</xpath>
+      <value>
+        <MoveSpeed>7.5</MoveSpeed>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/ThingDef[defName = "AEXP_Jaguar"]/statBases/Wildness</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/ThingDef[defName = "AEXP_Jaguar"]/statBases/Wildness</xpath>
+      <value>
+        <Wildness>0.8</Wildness>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[defName = "AEXP_Jaguar"]/statBases</xpath>
+      <value>
+        <Wildness>0.8</Wildness>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/ThingDef[defName = "AEXP_Jaguar"]/statBases/FilthRate</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/ThingDef[defName = "AEXP_Jaguar"]/statBases/FilthRate</xpath>
+      <value>
+        <FilthRate>2</FilthRate>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[defName = "AEXP_Jaguar"]/statBases</xpath>
+      <value>
+        <FilthRate>2</FilthRate>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/ThingDef[defName = "AEXP_Jaguar"]/statBases/ComfyTemperatureMin</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/ThingDef[defName = "AEXP_Jaguar"]/statBases/ComfyTemperatureMin</xpath>
+      <value>
+        <ComfyTemperatureMin>-30</ComfyTemperatureMin>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[defName = "AEXP_Jaguar"]/statBases</xpath>
+      <value>
+        <ComfyTemperatureMin>-30</ComfyTemperatureMin>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/ThingDef[defName = "AEXP_Jaguar"]/statBases/ComfyTemperatureMax</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/ThingDef[defName = "AEXP_Jaguar"]/statBases/ComfyTemperatureMax</xpath>
+      <value>
+        <ComfyTemperatureMax>40</ComfyTemperatureMax>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[defName = "AEXP_Jaguar"]/statBases</xpath>
+      <value>
+        <ComfyTemperatureMax>40</ComfyTemperatureMax>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/ThingDef[defName = "AEXP_Jaguar"]/statBases/ArmorRating_Blunt</xpath>
+    <match Class="PatchOperationRemove">
+      <xpath>/Defs/ThingDef[defName = "AEXP_Jaguar"]/statBases/ArmorRating_Blunt</xpath>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/ThingDef[defName = "AEXP_Jaguar"]/statBases/ArmorRating_Sharp</xpath>
+    <match Class="PatchOperationRemove">
+      <xpath>/Defs/ThingDef[defName = "AEXP_Jaguar"]/statBases/ArmorRating_Sharp</xpath>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/ThingDef[defName = "AEXP_Jaguar"]/statBases/ToxicEnvironmentResistance</xpath>
+    <match Class="PatchOperationRemove">
+      <xpath>/Defs/ThingDef[defName = "AEXP_Jaguar"]/statBases/ToxicEnvironmentResistance</xpath>
+    </match>
+  </Operation>
+  
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/ThingDef[defName = "AEXP_Jaguar"]/tools</xpath>
+    <match Class="PatchOperationRemove">
+      <xpath>/Defs/ThingDef[defName = "AEXP_Jaguar"]/tools</xpath>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName = "AEXP_Jaguar"]</xpath>
     <value>
+      <tools>
+        <li>
+          <label>head</label>
+          <capacities>
+            <li>Blunt</li>
           </capacities>
           <power>8</power>
           <cooldownTime>2.1</cooldownTime>
@@ -1321,13 +1528,13 @@
       </tools>
     </value>
   </Operation>
-  <!-- AEXP_Jaguar RaceProperties -->
+  
   <Operation Class="PatchOperationConditional">
     <xpath>/Defs/ThingDef[defName = "AEXP_Jaguar"]/race</xpath>
     <nomatch Class="PatchOperationAdd">
       <xpath>/Defs/ThingDef[defName = "AEXP_Jaguar"]</xpath>
       <value>
-        <race/>
+        <race />
       </value>
     </nomatch>
   </Operation>
@@ -1668,7 +1875,7 @@
       <xpath>/Defs/ThingDef[defName = "AEXP_Jaguar"]/tradeTags</xpath>
     </match>
   </Operation>
-  <!-- AEXP_Jaguar PawnKindDef -->
+  
   <Operation Class="PatchOperationConditional">
     <xpath>/Defs/PawnKindDef[defName = "AEXP_Jaguar"]/combatPower</xpath>
     <match Class="PatchOperationReplace">
@@ -1717,14 +1924,14 @@
       <xpath>/Defs/PawnKindDef[defName = "AEXP_Jaguar"]/moveSpeedFactorByTerrainTag/li[key = 'Water']</xpath>
     </match>
   </Operation>
-  <!-- Combat Extended specific patches -->
+  
   <Operation Class="PatchOperationFindMod">
     <mods>
       <li>Combat Extended</li>
     </mods>
     <match Class="PatchOperationSequence">
       <operations>
-        <!-- AEXP_Cheetah CE patches -->
+        
         <li Class="PatchOperationConditional">
           <xpath>Defs/ThingDef[defName="AEXP_Cheetah"]/statBases/MeleeParryChance</xpath>
           <match Class="PatchOperationRemove">
@@ -1802,7 +2009,7 @@
           <nomatch Class="PatchOperationAdd">
             <xpath>Defs/ThingDef[defName="AEXP_Cheetah"]</xpath>
             <value>
-              <comps/>
+              <comps />
             </value>
           </nomatch>
         </li>
@@ -1917,7 +2124,7 @@
             <xpath>Defs/ThingDef[defName="AEXP_Cheetah"]/statBases/ArmorRating_Heat</xpath>
           </match>
         </li>
-        <!-- AEXP_Lion CE patches -->
+        
         <li Class="PatchOperationConditional">
           <xpath>Defs/ThingDef[defName="AEXP_Lion"]/statBases/MeleeDodgeChance</xpath>
           <match Class="PatchOperationReplace">
@@ -1998,7 +2205,7 @@
           <nomatch Class="PatchOperationAdd">
             <xpath>Defs/ThingDef[defName="AEXP_Lion"]</xpath>
             <value>
-              <comps/>
+              <comps />
             </value>
           </nomatch>
         </li>
@@ -2143,7 +2350,7 @@
             <xpath>Defs/ThingDef[defName="AEXP_Lion"]/statBases/ArmorRating_Heat</xpath>
           </match>
         </li>
-        <!-- AEXP_Jaguar CE patches -->
+        
         <li Class="PatchOperationConditional">
           <xpath>Defs/ThingDef[defName="AEXP_Jaguar"]/statBases/MeleeParryChance</xpath>
           <match Class="PatchOperationRemove">
@@ -2221,7 +2428,7 @@
           <nomatch Class="PatchOperationAdd">
             <xpath>Defs/ThingDef[defName="AEXP_Jaguar"]</xpath>
             <value>
-              <comps/>
+              <comps />
             </value>
           </nomatch>
         </li>

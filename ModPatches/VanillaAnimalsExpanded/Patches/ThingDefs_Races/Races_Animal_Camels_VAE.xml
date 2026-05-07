@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <Patch>
-  <!---->
-  <!-- AEXP_Camel -->
+  
+  
   <Operation Class="PatchOperationAttributeSet">
     <xpath>/Defs/ThingDef[defName = "AEXP_Camel"]</xpath>
     <attribute>ParentName</attribute>
@@ -12,7 +12,7 @@
     <attribute>ParentName</attribute>
     <value>AnimalKindBase</value>
   </Operation>
-  <!-- AEXP_Camel StatBases -->
+  
   <Operation Class="PatchOperationConditional">
     <xpath>/Defs/ThingDef[defName = "AEXP_Camel"]/statBases/MarketValue</xpath>
     <match Class="PatchOperationReplace">
@@ -121,7 +121,7 @@
       <xpath>/Defs/ThingDef[defName = "AEXP_Camel"]/statBases/ToxicEnvironmentResistance</xpath>
     </match>
   </Operation>
-  <!-- AEXP_Camel tools -->
+  
   <Operation Class="PatchOperationConditional">
     <xpath>/Defs/ThingDef[defName = "AEXP_Camel"]/tools</xpath>
     <match Class="PatchOperationRemove">
@@ -175,7 +175,7 @@
       </tools>
     </value>
   </Operation>
-  <!-- AEXP_Camel RaceProperties -->
+  
   <Operation Class="PatchOperationConditional">
     <xpath>/Defs/ThingDef[defName = "AEXP_Camel"]/race/baseBodySize</xpath>
     <match Class="PatchOperationReplace">
@@ -535,7 +535,7 @@
         <def>AnimalJuvenile</def>
       </value>
     </match>
-    <nomatch/>
+    <nomatch />
   </Operation>
   <Operation Class="PatchOperationConditional">
     <xpath>/Defs/ThingDef[defName = "AEXP_Camel"]/race/lifeStageAges/li[3]</xpath>
@@ -545,7 +545,7 @@
         <def>AnimalAdult</def>
       </value>
     </match>
-    <nomatch/>
+    <nomatch />
   </Operation>
   <Operation Class="PatchOperationConditional">
     <xpath>/Defs/ThingDef[defName = "AEXP_Camel"]/race/lifeStageAges/li[2]</xpath>
@@ -555,7 +555,7 @@
         <minAge>0.3</minAge>
       </value>
     </match>
-    <nomatch/>
+    <nomatch />
   </Operation>
   <Operation Class="PatchOperationConditional">
     <xpath>/Defs/ThingDef[defName = "AEXP_Camel"]/race/lifeStageAges/li[3]</xpath>
@@ -565,7 +565,7 @@
         <minAge>0.6</minAge>
       </value>
     </match>
-    <nomatch/>
+    <nomatch />
   </Operation>
   <Operation Class="PatchOperationConditional">
     <xpath>/Defs/ThingDef[defName = "AEXP_Camel"]/race/litterSizeCurve</xpath>
@@ -604,13 +604,80 @@
       </value>
     </nomatch>
   </Operation>
-  <Operation Class="PatchOperationAddModExtension">
-    <xpath>/Defs/ThingDef[defName = "AEXP_Camel"]</xpath>
-    <value>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName = "AEXP_Camel"]/combatPower</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName = "AEXP_Camel"]/combatPower</xpath>
+      <value>
+        <combatPower>205</combatPower>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName = "AEXP_Camel"]</xpath>
+      <value>
+        <combatPower>205</combatPower>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName = "AEXP_Camel"]/ecoSystemWeight</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName = "AEXP_Camel"]/ecoSystemWeight</xpath>
+      <value>
+        <ecoSystemWeight>1.5</ecoSystemWeight>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName = "AEXP_Camel"]</xpath>
+      <value>
+        <ecoSystemWeight>1.5</ecoSystemWeight>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName = "AEXP_Camel"]/canArriveManhunter</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName = "AEXP_Camel"]/canArriveManhunter</xpath>
+      <value>
+        <canArriveManhunter>false</canArriveManhunter>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName = "AEXP_Camel"]</xpath>
+      <value>
+        <canArriveManhunter>false</canArriveManhunter>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName = "AEXP_Camel"]/wildGroupSize</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName = "AEXP_Camel"]/wildGroupSize</xpath>
+      <value>
+        <wildGroupSize>3~10</wildGroupSize>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName = "AEXP_Camel"]</xpath>
+      <value>
+        <wildGroupSize>3~10</wildGroupSize>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName = "AEXP_Camel"]/moveSpeedFactorByTerrainTag/li[key = 'Water']</xpath>
+    <match Class="PatchOperationRemove">
+      <xpath>/Defs/PawnKindDef[defName = "AEXP_Camel"]/moveSpeedFactorByTerrainTag/li[key = 'Water']</xpath>
+    </match>
+  </Operation>
+  
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Combat Extended</li>
     </mods>
     <match Class="PatchOperationSequence">
       <operations>
-        <!-- AEXP_Camel CE patches -->
+        
         <li Class="PatchOperationConditional">
           <xpath>Defs/ThingDef[defName="AEXP_Camel"]/statBases/MeleeDodgeChance</xpath>
           <match Class="PatchOperationReplace">
@@ -691,7 +758,7 @@
           <nomatch Class="PatchOperationAdd">
             <xpath>Defs/ThingDef[defName="AEXP_Camel"]</xpath>
             <value>
-              <comps/>
+              <comps />
             </value>
           </nomatch>
         </li>

@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <Patch>
-  <!---->
-  <!-- WasteRat -->
+  
+  
   <Operation Class="PatchOperationAttributeSet">
     <xpath>/Defs/ThingDef[defName = "WasteRat"]</xpath>
     <attribute>ParentName</attribute>
@@ -12,7 +12,7 @@
     <attribute>ParentName</attribute>
     <value>AnimalKindBase</value>
   </Operation>
-  <!-- WasteRat StatBases -->
+  
   <Operation Class="PatchOperationConditional">
     <xpath>/Defs/ThingDef[defName = "WasteRat"]/statBases/MarketValue</xpath>
     <match Class="PatchOperationReplace">
@@ -130,7 +130,7 @@
       </value>
     </nomatch>
   </Operation>
-  <!-- WasteRat tools -->
+  
   <Operation Class="PatchOperationConditional">
     <xpath>/Defs/ThingDef[defName = "WasteRat"]/tools</xpath>
     <match Class="PatchOperationRemove">
@@ -164,7 +164,7 @@
       </tools>
     </value>
   </Operation>
-  <!-- WasteRat RaceProperties -->
+  
   <Operation Class="PatchOperationConditional">
     <xpath>/Defs/ThingDef[defName = "WasteRat"]/race/baseBodySize</xpath>
     <match Class="PatchOperationReplace">
@@ -637,12 +637,6 @@
       </value>
     </nomatch>
   </Operation>
-  <Operation Class="PatchOperationAddModExtension">
-    <xpath>/Defs/ThingDef[defName = "WasteRat"]</xpath>
-    <value>
-    </value>
-  </Operation>
-  <!-- WasteRat PawnKindDef -->
   <Operation Class="PatchOperationConditional">
     <xpath>/Defs/PawnKindDef[defName = "WasteRat"]/combatPower</xpath>
     <match Class="PatchOperationReplace">
@@ -709,14 +703,14 @@
       <xpath>/Defs/PawnKindDef[defName = "WasteRat"]/moveSpeedFactorByTerrainTag/li[key = 'Water']</xpath>
     </match>
   </Operation>
-  <!-- Combat Extended specific patches -->
+  
   <Operation Class="PatchOperationFindMod">
     <mods>
       <li>Combat Extended</li>
     </mods>
     <match Class="PatchOperationSequence">
       <operations>
-        <!-- WasteRat CE patches -->
+        
         <li Class="PatchOperationConditional">
           <xpath>Defs/ThingDef[defName="WasteRat"]/statBases/MeleeDodgeChance</xpath>
           <match Class="PatchOperationReplace">
@@ -797,7 +791,7 @@
           <nomatch Class="PatchOperationAdd">
             <xpath>Defs/ThingDef[defName="WasteRat"]</xpath>
             <value>
-              <comps/>
+              <comps />
             </value>
           </nomatch>
         </li>

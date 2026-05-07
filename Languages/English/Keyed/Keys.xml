@@ -1,4 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-	<Grounded_AdjustedOtherFactors>Life stage factor</Grounded_AdjustedOtherFactors>
+
+	<Zoology_AdjustedOtherFactors>Life stage factor</Zoology_AdjustedOtherFactors>
+	<ZoologySlaughterDesignationAdded>You've marked {0} for slaughter—it may react with aggression!</ZoologySlaughterDesignationAdded>
+	<ZoologySensesSlaughterIntent>{0} senses killing intent and begins to attack viciously!</ZoologySensesSlaughterIntent>
+	<LetterLabelPredatorProtectingPrey>{PREDATOR} is protecting its prey</LetterLabelPredatorProtectingPrey>
+	<LetterPredatorProtectingPrey>{PREDATOR} is protecting its prey and is attacking {PREY}.</LetterPredatorProtectingPrey>
+	<LetterLabelPredatorProtectingPreyPack>Pack of {PREDATOR} is protecting its prey</LetterLabelPredatorProtectingPreyPack>
+	<LetterPredatorProtectingPreyPack>A pack of {PREDATOR} is protecting its prey and is attacking {PREY}.</LetterPredatorProtectingPreyPack>
+	<ZoologyCannotDraftDuringRitual>Animals cannot be drafted during rituals.</ZoologyCannotDraftDuringRitual>
+	<ZoologyCannotDraftDormant>Dormant animals cannot be drafted.</ZoologyCannotDraftDormant>
+	
 </LanguageData>
