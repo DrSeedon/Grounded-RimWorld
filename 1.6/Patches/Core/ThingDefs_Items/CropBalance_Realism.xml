@@ -4,7 +4,9 @@
   <!-- ============================================= -->
   <!-- Grounded: Realistic Crop Balance          -->
   <!-- Nutrition stays 0.05 for all (cooking compat) -->
-  <!-- Changes: yield, rot, mass, temperature, price -->
+  <!-- Changes: yield, rot, mass, price -->
+  <!-- NOTE: minGrowTemperature is not a valid PlantProperties field in RimWorld 1.6 -->
+  <!-- Temperature restrictions require C# — removed to prevent XML errors -->
   <!-- ============================================= -->
 
 
@@ -46,23 +48,6 @@
     </nomatch>
   </Operation>
 
-  <!-- MinGrowTemp: default → 2°C (potatoes survive near-frost, IRL planted early spring) -->
-  <Operation Class="PatchOperationConditional">
-    <xpath>/Defs/ThingDef[defName="Plant_Potato"]/plant/minGrowTemperature</xpath>
-    <match Class="PatchOperationReplace">
-      <xpath>/Defs/ThingDef[defName="Plant_Potato"]/plant/minGrowTemperature</xpath>
-      <value>
-        <minGrowTemperature>2</minGrowTemperature>
-      </value>
-    </match>
-    <nomatch Class="PatchOperationAdd">
-      <xpath>/Defs/ThingDef[defName="Plant_Potato"]/plant</xpath>
-      <value>
-        <minGrowTemperature>2</minGrowTemperature>
-      </value>
-    </nomatch>
-  </Operation>
-
   <!-- MarketValue: 1.1 → 0.9 (cheap staple, peasant food) -->
   <Operation Class="PatchOperationReplace">
     <xpath>/Defs/ThingDef[defName="RawPotatoes"]/statBases/MarketValue</xpath>
@@ -90,23 +75,6 @@
       <xpath>/Defs/ThingDef[defName="RawRice"]/statBases</xpath>
       <value>
         <Mass>0.02</Mass>
-      </value>
-    </nomatch>
-  </Operation>
-
-  <!-- MinGrowTemp: default → 12°C (rice is tropical, needs warmth) -->
-  <Operation Class="PatchOperationConditional">
-    <xpath>/Defs/ThingDef[defName="Plant_Rice"]/plant/minGrowTemperature</xpath>
-    <match Class="PatchOperationReplace">
-      <xpath>/Defs/ThingDef[defName="Plant_Rice"]/plant/minGrowTemperature</xpath>
-      <value>
-        <minGrowTemperature>12</minGrowTemperature>
-      </value>
-    </match>
-    <nomatch Class="PatchOperationAdd">
-      <xpath>/Defs/ThingDef[defName="Plant_Rice"]/plant</xpath>
-      <value>
-        <minGrowTemperature>12</minGrowTemperature>
       </value>
     </nomatch>
   </Operation>
