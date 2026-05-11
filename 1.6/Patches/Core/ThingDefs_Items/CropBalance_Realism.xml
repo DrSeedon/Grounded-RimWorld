@@ -134,12 +134,45 @@
     </value>
   </Operation>
 
+  <!-- MinGrowthTemperature: default → 5°C (strawberries are fragile, no frost) -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/ThingDef[defName="Plant_Strawberry"]/plant/minGrowthTemperature</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/ThingDef[defName="Plant_Strawberry"]/plant/minGrowthTemperature</xpath>
+      <value>
+        <minGrowthTemperature>5</minGrowthTemperature>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[defName="Plant_Strawberry"]/plant</xpath>
+      <value>
+        <minGrowthTemperature>5</minGrowthTemperature>
+      </value>
+    </nomatch>
+  </Operation>
+
 
   <!-- ===================== -->
-  <!-- CORN: No changes needed -->
+  <!-- CORN: No changes needed (stats) -->
   <!-- Already well balanced: long grow, high yield, 60 day storage -->
   <!-- IRL: 9M kcal/hectare, low labor, stores 1-2 years dry -->
   <!-- ===================== -->
-  <!-- Corn is the gold standard — everything else balanced around it -->
+
+  <!-- MinGrowthTemperature: default → 10°C (corn is warm-season crop, no frost) -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/ThingDef[defName="Plant_Corn"]/plant/minGrowthTemperature</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/ThingDef[defName="Plant_Corn"]/plant/minGrowthTemperature</xpath>
+      <value>
+        <minGrowthTemperature>10</minGrowthTemperature>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[defName="Plant_Corn"]/plant</xpath>
+      <value>
+        <minGrowthTemperature>10</minGrowthTemperature>
+      </value>
+    </nomatch>
+  </Operation>
 
 </Patch>
