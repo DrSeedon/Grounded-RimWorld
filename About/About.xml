@@ -1,27 +1,27 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-  <name>Zoology: Realistic Animal Overhaul</name>
-  <author>AbobaShark</author>
-  <url></url>
+  <name>Grounded: Realistic Stats Overhaul</name>
+  <author>DrSeedon</author>
+  <url>https://github.com/DrSeedon/Grounded-RimWorld</url>
   <supportedVersions>
     <li>1.6</li>
   </supportedVersions>
-  <packageId>com.abobashark.zoologymod</packageId>
-  <modVersion>0.4</modVersion>
-  <description>Zoology rewrites animals in the game from the ground up. It replaces vanilla stats with values derived from real-life zoological parameters, adds a host of behavior options (pack hunting, prey defense, mammal lactation, scavenging, pet ignorance by raiders), and provides modder-facing extensions so other mods can integrate cleanly. Combat behavior and damage are adjusted to remain balanced in-game while offering a far more biologically plausible experience.</description>
+  <packageId>seedon.grounded</packageId>
+  <modVersion>1.0</modVersion>
+  <description>Pure XML overhaul. No Harmony. No DLL. No behavior changes.
+
+Recalculates animal stats from real-world zoological data: body size, speed, lifespan, gestation, litter size, diet, temperature tolerance, meat/leather yield, manhunter chance, market value.
+
+Differentiates crop economics: potato yields more but rots faster; rice needs warmth; strawberries are a luxury that spoils quickly.
+
+New body types, sounds, and biome spawn rates for vanilla + DLC + mod animals.
+
+Compatible with Combat Extended, Vanilla Animals Expanded, Alpha Animals, Biotech, Odyssey.</description>
   <modIconPath IgnoreIfNoMatchingField="True">UI/Icons/Zoology_ModIcon</modIconPath>
-  <modDependencies>
-    <li>
-      <packageId>brrainz.harmony</packageId>
-      <displayName>Harmony</displayName>
-      <steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
-      <downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
-    </li>
-  </modDependencies>
   <incompatibleWith>
   </incompatibleWith>
   <loadBefore>
-  <li>VFME.CaravanPacks</li>
+    <li>VFME.CaravanPacks</li>
   </loadBefore>
   <loadAfter>
     <li>Ludeon.RimWorld</li>
@@ -30,12 +30,12 @@
     <li>Ludeon.RimWorld.Odyssey</li>
     <li>Ludeon.RimWorld.Biotech</li>
     <li>Ludeon.RimWorld.Anomaly</li>
-	<li>CETeam.CombatExtended</li>
-	<li>OskarPotocki.VanillaFactionsExpanded.Core</li>
-	<li>VanillaExpanded.VanillaAnimalsExpanded</li>
-	<li>VanillaExpanded.VAERoy</li>
-	<li>VanillaExpanded.VAEEndAndExt</li>
-	<li>VanillaExpanded.VAEWaste</li>
-	<li>sarg.alphaanimals</li>
+    <li>CETeam.CombatExtended</li>
+    <li>OskarPotocki.VanillaFactionsExpanded.Core</li>
+    <li>VanillaExpanded.VanillaAnimalsExpanded</li>
+    <li>VanillaExpanded.VAERoy</li>
+    <li>VanillaExpanded.VAEEndAndExt</li>
+    <li>VanillaExpanded.VAEWaste</li>
+    <li>sarg.alphaanimals</li>
   </loadAfter>
 </ModMetaData>

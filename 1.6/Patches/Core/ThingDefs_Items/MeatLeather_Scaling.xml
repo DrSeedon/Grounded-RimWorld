@@ -100,38 +100,6 @@
     </nomatch>
   </Operation>
 
-  <!-- Bear_Polar: bodySize=2.25 → Meat=225, Leather=90 -->
-  <Operation Class="PatchOperationConditional">
-    <xpath>/Defs/ThingDef[defName = "Bear_Polar"]/statBases/MeatAmount</xpath>
-    <match Class="PatchOperationReplace">
-      <xpath>/Defs/ThingDef[defName = "Bear_Polar"]/statBases/MeatAmount</xpath>
-      <value>
-        <MeatAmount>225</MeatAmount>
-      </value>
-    </match>
-    <nomatch Class="PatchOperationAdd">
-      <xpath>/Defs/ThingDef[defName = "Bear_Polar"]/statBases</xpath>
-      <value>
-        <MeatAmount>225</MeatAmount>
-      </value>
-    </nomatch>
-  </Operation>
-  <Operation Class="PatchOperationConditional">
-    <xpath>/Defs/ThingDef[defName = "Bear_Polar"]/statBases/LeatherAmount</xpath>
-    <match Class="PatchOperationReplace">
-      <xpath>/Defs/ThingDef[defName = "Bear_Polar"]/statBases/LeatherAmount</xpath>
-      <value>
-        <LeatherAmount>90</LeatherAmount>
-      </value>
-    </match>
-    <nomatch Class="PatchOperationAdd">
-      <xpath>/Defs/ThingDef[defName = "Bear_Polar"]/statBases</xpath>
-      <value>
-        <LeatherAmount>90</LeatherAmount>
-      </value>
-    </nomatch>
-  </Operation>
-
   <!-- Bison: bodySize=3.0 → Meat=300, Leather=120 -->
   <Operation Class="PatchOperationConditional">
     <xpath>/Defs/ThingDef[defName = "Bison"]/statBases/MeatAmount</xpath>
@@ -708,70 +676,6 @@
     </nomatch>
   </Operation>
 
-  <!-- Emu: bodySize=0.75 → Meat=75, Leather=30 -->
-  <Operation Class="PatchOperationConditional">
-    <xpath>/Defs/ThingDef[defName = "Emu"]/statBases/MeatAmount</xpath>
-    <match Class="PatchOperationReplace">
-      <xpath>/Defs/ThingDef[defName = "Emu"]/statBases/MeatAmount</xpath>
-      <value>
-        <MeatAmount>75</MeatAmount>
-      </value>
-    </match>
-    <nomatch Class="PatchOperationAdd">
-      <xpath>/Defs/ThingDef[defName = "Emu"]/statBases</xpath>
-      <value>
-        <MeatAmount>75</MeatAmount>
-      </value>
-    </nomatch>
-  </Operation>
-  <Operation Class="PatchOperationConditional">
-    <xpath>/Defs/ThingDef[defName = "Emu"]/statBases/LeatherAmount</xpath>
-    <match Class="PatchOperationReplace">
-      <xpath>/Defs/ThingDef[defName = "Emu"]/statBases/LeatherAmount</xpath>
-      <value>
-        <LeatherAmount>30</LeatherAmount>
-      </value>
-    </match>
-    <nomatch Class="PatchOperationAdd">
-      <xpath>/Defs/ThingDef[defName = "Emu"]/statBases</xpath>
-      <value>
-        <LeatherAmount>30</LeatherAmount>
-      </value>
-    </nomatch>
-  </Operation>
-
-  <!-- Fox_Arctic: bodySize=0.3 → Meat=30, Leather=12 -->
-  <Operation Class="PatchOperationConditional">
-    <xpath>/Defs/ThingDef[defName = "Fox_Arctic"]/statBases/MeatAmount</xpath>
-    <match Class="PatchOperationReplace">
-      <xpath>/Defs/ThingDef[defName = "Fox_Arctic"]/statBases/MeatAmount</xpath>
-      <value>
-        <MeatAmount>30</MeatAmount>
-      </value>
-    </match>
-    <nomatch Class="PatchOperationAdd">
-      <xpath>/Defs/ThingDef[defName = "Fox_Arctic"]/statBases</xpath>
-      <value>
-        <MeatAmount>30</MeatAmount>
-      </value>
-    </nomatch>
-  </Operation>
-  <Operation Class="PatchOperationConditional">
-    <xpath>/Defs/ThingDef[defName = "Fox_Arctic"]/statBases/LeatherAmount</xpath>
-    <match Class="PatchOperationReplace">
-      <xpath>/Defs/ThingDef[defName = "Fox_Arctic"]/statBases/LeatherAmount</xpath>
-      <value>
-        <LeatherAmount>12</LeatherAmount>
-      </value>
-    </match>
-    <nomatch Class="PatchOperationAdd">
-      <xpath>/Defs/ThingDef[defName = "Fox_Arctic"]/statBases</xpath>
-      <value>
-        <LeatherAmount>12</LeatherAmount>
-      </value>
-    </nomatch>
-  </Operation>
-
   <!-- Fox_Fennec: bodySize=0.2 → Meat=20, Leather=8 -->
   <Operation Class="PatchOperationConditional">
     <xpath>/Defs/ThingDef[defName = "Fox_Fennec"]/statBases/MeatAmount</xpath>
@@ -800,38 +704,6 @@
       <xpath>/Defs/ThingDef[defName = "Fox_Fennec"]/statBases</xpath>
       <value>
         <LeatherAmount>8</LeatherAmount>
-      </value>
-    </nomatch>
-  </Operation>
-
-  <!-- Fox_Red: bodySize=0.4 → Meat=40, Leather=16 -->
-  <Operation Class="PatchOperationConditional">
-    <xpath>/Defs/ThingDef[defName = "Fox_Red"]/statBases/MeatAmount</xpath>
-    <match Class="PatchOperationReplace">
-      <xpath>/Defs/ThingDef[defName = "Fox_Red"]/statBases/MeatAmount</xpath>
-      <value>
-        <MeatAmount>40</MeatAmount>
-      </value>
-    </match>
-    <nomatch Class="PatchOperationAdd">
-      <xpath>/Defs/ThingDef[defName = "Fox_Red"]/statBases</xpath>
-      <value>
-        <MeatAmount>40</MeatAmount>
-      </value>
-    </nomatch>
-  </Operation>
-  <Operation Class="PatchOperationConditional">
-    <xpath>/Defs/ThingDef[defName = "Fox_Red"]/statBases/LeatherAmount</xpath>
-    <match Class="PatchOperationReplace">
-      <xpath>/Defs/ThingDef[defName = "Fox_Red"]/statBases/LeatherAmount</xpath>
-      <value>
-        <LeatherAmount>16</LeatherAmount>
-      </value>
-    </match>
-    <nomatch Class="PatchOperationAdd">
-      <xpath>/Defs/ThingDef[defName = "Fox_Red"]/statBases</xpath>
-      <value>
-        <LeatherAmount>16</LeatherAmount>
       </value>
     </nomatch>
   </Operation>
@@ -896,38 +768,6 @@
       <xpath>/Defs/ThingDef[defName = "Goat"]/statBases</xpath>
       <value>
         <LeatherAmount>38</LeatherAmount>
-      </value>
-    </nomatch>
-  </Operation>
-
-  <!-- Goose: bodySize=0.35 → Meat=35, Leather=14 -->
-  <Operation Class="PatchOperationConditional">
-    <xpath>/Defs/ThingDef[defName = "Goose"]/statBases/MeatAmount</xpath>
-    <match Class="PatchOperationReplace">
-      <xpath>/Defs/ThingDef[defName = "Goose"]/statBases/MeatAmount</xpath>
-      <value>
-        <MeatAmount>35</MeatAmount>
-      </value>
-    </match>
-    <nomatch Class="PatchOperationAdd">
-      <xpath>/Defs/ThingDef[defName = "Goose"]/statBases</xpath>
-      <value>
-        <MeatAmount>35</MeatAmount>
-      </value>
-    </nomatch>
-  </Operation>
-  <Operation Class="PatchOperationConditional">
-    <xpath>/Defs/ThingDef[defName = "Goose"]/statBases/LeatherAmount</xpath>
-    <match Class="PatchOperationReplace">
-      <xpath>/Defs/ThingDef[defName = "Goose"]/statBases/LeatherAmount</xpath>
-      <value>
-        <LeatherAmount>14</LeatherAmount>
-      </value>
-    </match>
-    <nomatch Class="PatchOperationAdd">
-      <xpath>/Defs/ThingDef[defName = "Goose"]/statBases</xpath>
-      <value>
-        <LeatherAmount>14</LeatherAmount>
       </value>
     </nomatch>
   </Operation>
@@ -1156,38 +996,6 @@
     </nomatch>
   </Operation>
 
-  <!-- Megascarab: bodySize=0.4 → Meat=40, Leather=16 -->
-  <Operation Class="PatchOperationConditional">
-    <xpath>/Defs/ThingDef[defName = "Megascarab"]/statBases/MeatAmount</xpath>
-    <match Class="PatchOperationReplace">
-      <xpath>/Defs/ThingDef[defName = "Megascarab"]/statBases/MeatAmount</xpath>
-      <value>
-        <MeatAmount>40</MeatAmount>
-      </value>
-    </match>
-    <nomatch Class="PatchOperationAdd">
-      <xpath>/Defs/ThingDef[defName = "Megascarab"]/statBases</xpath>
-      <value>
-        <MeatAmount>40</MeatAmount>
-      </value>
-    </nomatch>
-  </Operation>
-  <Operation Class="PatchOperationConditional">
-    <xpath>/Defs/ThingDef[defName = "Megascarab"]/statBases/LeatherAmount</xpath>
-    <match Class="PatchOperationReplace">
-      <xpath>/Defs/ThingDef[defName = "Megascarab"]/statBases/LeatherAmount</xpath>
-      <value>
-        <LeatherAmount>16</LeatherAmount>
-      </value>
-    </match>
-    <nomatch Class="PatchOperationAdd">
-      <xpath>/Defs/ThingDef[defName = "Megascarab"]/statBases</xpath>
-      <value>
-        <LeatherAmount>16</LeatherAmount>
-      </value>
-    </nomatch>
-  </Operation>
-
   <!-- Megasloth: bodySize=4.75 → Meat=475, Leather=190 -->
   <Operation Class="PatchOperationConditional">
     <xpath>/Defs/ThingDef[defName = "Megasloth"]/statBases/MeatAmount</xpath>
@@ -1312,38 +1120,6 @@
       <xpath>/Defs/ThingDef[defName = "Muffalo"]/statBases</xpath>
       <value>
         <LeatherAmount>100</LeatherAmount>
-      </value>
-    </nomatch>
-  </Operation>
-
-  <!-- Ostrich: bodySize=1.3 → Meat=130, Leather=52 -->
-  <Operation Class="PatchOperationConditional">
-    <xpath>/Defs/ThingDef[defName = "Ostrich"]/statBases/MeatAmount</xpath>
-    <match Class="PatchOperationReplace">
-      <xpath>/Defs/ThingDef[defName = "Ostrich"]/statBases/MeatAmount</xpath>
-      <value>
-        <MeatAmount>130</MeatAmount>
-      </value>
-    </match>
-    <nomatch Class="PatchOperationAdd">
-      <xpath>/Defs/ThingDef[defName = "Ostrich"]/statBases</xpath>
-      <value>
-        <MeatAmount>130</MeatAmount>
-      </value>
-    </nomatch>
-  </Operation>
-  <Operation Class="PatchOperationConditional">
-    <xpath>/Defs/ThingDef[defName = "Ostrich"]/statBases/LeatherAmount</xpath>
-    <match Class="PatchOperationReplace">
-      <xpath>/Defs/ThingDef[defName = "Ostrich"]/statBases/LeatherAmount</xpath>
-      <value>
-        <LeatherAmount>52</LeatherAmount>
-      </value>
-    </match>
-    <nomatch Class="PatchOperationAdd">
-      <xpath>/Defs/ThingDef[defName = "Ostrich"]/statBases</xpath>
-      <value>
-        <LeatherAmount>52</LeatherAmount>
       </value>
     </nomatch>
   </Operation>
@@ -1540,38 +1316,6 @@
     </nomatch>
   </Operation>
 
-  <!-- Spelopede: bodySize=1.5 → Meat=150, Leather=60 -->
-  <Operation Class="PatchOperationConditional">
-    <xpath>/Defs/ThingDef[defName = "Spelopede"]/statBases/MeatAmount</xpath>
-    <match Class="PatchOperationReplace">
-      <xpath>/Defs/ThingDef[defName = "Spelopede"]/statBases/MeatAmount</xpath>
-      <value>
-        <MeatAmount>150</MeatAmount>
-      </value>
-    </match>
-    <nomatch Class="PatchOperationAdd">
-      <xpath>/Defs/ThingDef[defName = "Spelopede"]/statBases</xpath>
-      <value>
-        <MeatAmount>150</MeatAmount>
-      </value>
-    </nomatch>
-  </Operation>
-  <Operation Class="PatchOperationConditional">
-    <xpath>/Defs/ThingDef[defName = "Spelopede"]/statBases/LeatherAmount</xpath>
-    <match Class="PatchOperationReplace">
-      <xpath>/Defs/ThingDef[defName = "Spelopede"]/statBases/LeatherAmount</xpath>
-      <value>
-        <LeatherAmount>60</LeatherAmount>
-      </value>
-    </match>
-    <nomatch Class="PatchOperationAdd">
-      <xpath>/Defs/ThingDef[defName = "Spelopede"]/statBases</xpath>
-      <value>
-        <LeatherAmount>60</LeatherAmount>
-      </value>
-    </nomatch>
-  </Operation>
-
   <!-- Squirrel: bodySize=0.15 → Meat=15, Leather=6 -->
   <Operation Class="PatchOperationConditional">
     <xpath>/Defs/ThingDef[defName = "Squirrel"]/statBases/MeatAmount</xpath>
@@ -1728,70 +1472,6 @@
       <xpath>/Defs/ThingDef[defName = "Warg"]/statBases</xpath>
       <value>
         <LeatherAmount>72</LeatherAmount>
-      </value>
-    </nomatch>
-  </Operation>
-
-  <!-- WildBoar: bodySize=1.5 → Meat=150, Leather=60 -->
-  <Operation Class="PatchOperationConditional">
-    <xpath>/Defs/ThingDef[defName = "WildBoar"]/statBases/MeatAmount</xpath>
-    <match Class="PatchOperationReplace">
-      <xpath>/Defs/ThingDef[defName = "WildBoar"]/statBases/MeatAmount</xpath>
-      <value>
-        <MeatAmount>150</MeatAmount>
-      </value>
-    </match>
-    <nomatch Class="PatchOperationAdd">
-      <xpath>/Defs/ThingDef[defName = "WildBoar"]/statBases</xpath>
-      <value>
-        <MeatAmount>150</MeatAmount>
-      </value>
-    </nomatch>
-  </Operation>
-  <Operation Class="PatchOperationConditional">
-    <xpath>/Defs/ThingDef[defName = "WildBoar"]/statBases/LeatherAmount</xpath>
-    <match Class="PatchOperationReplace">
-      <xpath>/Defs/ThingDef[defName = "WildBoar"]/statBases/LeatherAmount</xpath>
-      <value>
-        <LeatherAmount>60</LeatherAmount>
-      </value>
-    </match>
-    <nomatch Class="PatchOperationAdd">
-      <xpath>/Defs/ThingDef[defName = "WildBoar"]/statBases</xpath>
-      <value>
-        <LeatherAmount>60</LeatherAmount>
-      </value>
-    </nomatch>
-  </Operation>
-
-  <!-- Wolf_Arctic: bodySize=0.8 → Meat=80, Leather=32 -->
-  <Operation Class="PatchOperationConditional">
-    <xpath>/Defs/ThingDef[defName = "Wolf_Arctic"]/statBases/MeatAmount</xpath>
-    <match Class="PatchOperationReplace">
-      <xpath>/Defs/ThingDef[defName = "Wolf_Arctic"]/statBases/MeatAmount</xpath>
-      <value>
-        <MeatAmount>80</MeatAmount>
-      </value>
-    </match>
-    <nomatch Class="PatchOperationAdd">
-      <xpath>/Defs/ThingDef[defName = "Wolf_Arctic"]/statBases</xpath>
-      <value>
-        <MeatAmount>80</MeatAmount>
-      </value>
-    </nomatch>
-  </Operation>
-  <Operation Class="PatchOperationConditional">
-    <xpath>/Defs/ThingDef[defName = "Wolf_Arctic"]/statBases/LeatherAmount</xpath>
-    <match Class="PatchOperationReplace">
-      <xpath>/Defs/ThingDef[defName = "Wolf_Arctic"]/statBases/LeatherAmount</xpath>
-      <value>
-        <LeatherAmount>32</LeatherAmount>
-      </value>
-    </match>
-    <nomatch Class="PatchOperationAdd">
-      <xpath>/Defs/ThingDef[defName = "Wolf_Arctic"]/statBases</xpath>
-      <value>
-        <LeatherAmount>32</LeatherAmount>
       </value>
     </nomatch>
   </Operation>
