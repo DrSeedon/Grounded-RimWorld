@@ -23,19 +23,30 @@ packageId: `seedon.grounded`
 
 MeatAmount/LeatherAmount — отдельный файл `MeatLeather_Scaling.xml` (формула: bodySize×100 / ×40)
 
+### Деревья (Trees_Realism.xml, 14 видов)
+growDays + harvestYield из реального возраста рубки (sqrt-scale):
+- Быстрые: Bamboo 11d/10y, Cocoa 11d/20y, Cecropia 13d/20y
+- Средние: Poplar 18d/27y, Willow 18d/27y, Drago 20d/30y, Palm 23d/16y
+- Медленные: Birch 25d/39y, Pine 27d/43y, Maple 31d/50y
+- Долгие: Teak 35d/56y, Cypress 36d/59y, Oak 41d/67y
+- Нерфнут: Saguaro 23d/8y (кактус ≠ дерево)
+
 ### Кропы (CropBalance_Realism.xml)
 | Культура | Изменение |
 |----------|-----------|
 | Plant_Potato | harvestYield 11→14, minGrowthTemperature 2°C |
-| RawPotatoes | daysToRotStart 30→14, Mass 0.05, MarketValue 0.9 |
+| RawPotatoes | daysToRotStart 30→14, Mass 0.1, MarketValue 0.9 |
 | Plant_Rice | minGrowthTemperature 12°C |
 | RawRice | Mass 0.02 |
 | RawBerries | daysToRotStart 14→7, MarketValue 1.5 |
+| Plant_Strawberry | minGrowthTemperature 5°C |
+| Plant_Corn | minGrowthTemperature 10°C |
 
-### Прочее
-- Биомы: spawn rates и pack animals для 12 биомов
-- Тела: 18 новых BodyDefs (Arachnid, Hexapod, Slug, Squid, Kangaroo, Theropod...)
-- Звуки: Fox, Jaguar, Leopard, Ostrich, Puma, Tiger, Turkey, Wolf
+### Массы (Mass_Realism.xml)
+Ресурсы: Steel 0.5→0.8, WoodLog 0.4→0.7, Uranium 1.0→2.0
+Камень: Sandstone 2.5, Granite 3.5, Marble 2.8, Slate 2.3, Limestone 2.6
+Снаряды: HE 3.5, Incendiary 3.0, EMP 2.5 (было 1.25 для всех)
+Еда: MealSimple 0.4, MealFine 0.5, Pemmican 0.04, Kibble 0.04
 
 ### C# DLL: stackLimit авто-расчёт
 `Source/GroundedMod.cs` — `[StaticConstructorOnStartup]`, без Harmony.
@@ -43,6 +54,12 @@ MeatAmount/LeatherAmount — отдельный файл `MeatLeather_Scaling.xm
 - Трогает ВСЕ ThingDef с stackLimit > 1 и mass > 0
 - Единственное исключение: Medicine (thingCategories содержит "Medicine")
 - Только увеличивает (newStack >= originalStack)
+- Работает с модовыми предметами автоматически
+
+### Прочее
+- Биомы: spawn rates и pack animals для 12 биомов
+- Тела: 18 новых BodyDefs (Arachnid, Hexapod, Slug, Squid, Kangaroo, Theropod...)
+- Звуки: Fox, Jaguar, Leopard, Ostrich, Puma, Tiger, Turkey, Wolf
 
 ### Сборка DLL
 ```bash
