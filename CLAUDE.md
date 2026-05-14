@@ -39,11 +39,10 @@ MeatAmount/LeatherAmount — отдельный файл `MeatLeather_Scaling.xm
 
 ### C# DLL: stackLimit авто-расчёт
 `Source/GroundedMod.cs` — `[StaticConstructorOnStartup]`, без Harmony.
-Формула: `stackLimit = clamp(targetMass / mass, originalStack, maxCap)`
-- Еда (Foods, PlantFoodRaw, MeatRaw): target 30kg, cap 500
-- Ткани (stuffProps Fabric): target 30kg, cap 300
-- Кожи (Leathers): target 30kg, cap 200
-- stackLimit=1 не трогает, только увеличивает, пропускает Medicine/Mortar/Ammo
+Формула: `stackLimit = clamp(30 / mass, originalStack, 500)`
+- Трогает ВСЕ ThingDef с stackLimit > 1 и mass > 0
+- Единственное исключение: Medicine (thingCategories содержит "Medicine")
+- Только увеличивает (newStack >= originalStack)
 
 ### Сборка DLL
 ```bash
