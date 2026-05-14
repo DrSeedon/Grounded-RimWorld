@@ -1,11 +1,13 @@
 # Grounded: Realistic Stats Overhaul
 
 ## Что это
-XML-only мод для RimWorld 1.6. Реалистичные статы животных + баланс кропов. Без DLL, без Harmony.
+Мод для RimWorld 1.6. Реалистичные статы животных + баланс кропов + авто-масштабирование stackLimit. XML патчи + минимальный C# (без Harmony).
 
 packageId: `seedon.grounded`
 
 ## Структура
+- `Source/` — C# исходники (Grounded.csproj, GroundedMod.cs)
+- `1.6/Assemblies/` — скомпилированная Grounded.dll
 - `1.6/Patches/Core/` — основные XML патчи (животные, кропы, мясо/кожа, биомы, тела, звуки)
 - `1.6/Defs/` — новые Defs (тела, дамаг, звуки, обучаемые)
 - `DLC/Biotech/`, `DLC/Odyssey/` — патчи для DLC (условно через LoadFolders)
@@ -34,6 +36,20 @@ MeatAmount/LeatherAmount — отдельный файл `MeatLeather_Scaling.xm
 - Биомы: spawn rates и pack animals для 12 биомов
 - Тела: 18 новых BodyDefs (Arachnid, Hexapod, Slug, Squid, Kangaroo, Theropod...)
 - Звуки: Fox, Jaguar, Leopard, Ostrich, Puma, Tiger, Turkey, Wolf
+
+### C# DLL: stackLimit авто-расчёт
+`Source/GroundedMod.cs` — `[StaticConstructorOnStartup]`, без Harmony.
+Формула: `stackLimit = clamp(targetMass / mass, originalStack, maxCap)`
+- Еда (Foods, PlantFoodRaw, MeatRaw): target 30kg, cap 500
+- Ткани (stuffProps Fabric): target 30kg, cap 300
+- Кожи (Leathers): target 30kg, cap 200
+- stackLimit=1 не трогает, только увеличивает, пропускает Medicine/Mortar/Ammo
+
+### Сборка DLL
+```bash
+cd Source && dotnet build -c Release
+```
+Выход: `1.6/Assemblies/Grounded.dll`
 
 ## Совместимость
 CombatExtended (тела, бронь), VAE (все паки), Alpha Animals, Biotech, Odyssey

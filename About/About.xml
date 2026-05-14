@@ -8,9 +8,11 @@
   </supportedVersions>
   <packageId>seedon.grounded</packageId>
   <modVersion>1.0</modVersion>
-  <description>Pure XML overhaul. No Harmony. No DLL. No behavior changes.
+  <description>Realistic stats overhaul. No Harmony required.
 
 Recalculates animal stats from real-world zoological data: body size, speed, lifespan, gestation, litter size, diet, temperature tolerance, meat/leather yield, manhunter chance, market value.
+
+Auto-scales stackLimit for food, leather, and textiles based on item mass.
 
 Differentiates crop economics: potato yields more but rots faster; rice needs warmth; strawberries are a luxury that spoils quickly.
 
