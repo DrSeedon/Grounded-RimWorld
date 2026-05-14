@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<!-- Bamboo: 3-5 IRL years. Fast-growing grass, poor lumber -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="Plant_TreeBamboo"]/plant/growDays</xpath>
+		<value><growDays>11</growDays></value>
+	</Operation>
+
+	<!-- Cocoa: 3-5 IRL years. Tropical crop tree (yields chocolate) -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="Plant_TreeCocoa"]/plant/growDays</xpath>
+		<value><growDays>11</growDays></value>
+	</Operation>
+
+	<!-- Cecropia: 5-8 IRL years. Fast tropical pioneer -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="Plant_TreeCecropia"]/plant/growDays</xpath>
+		<value><growDays>13</growDays></value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="Plant_TreeCecropia"]/plant/harvestYield</xpath>
+		<value><harvestYield>20</harvestYield></value>
+	</Operation>
+
+	<!-- Poplar: 10-15 IRL years. Fast softwood rotation -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="Plant_TreePoplar"]/plant/growDays</xpath>
+		<value><growDays>18</growDays></value>
+	</Operation>
+
+	<!-- Willow: 8-15 IRL years. Fast shade tree, poor wood quality -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="Plant_TreeWillow"]/plant/growDays</xpath>
+		<value><growDays>18</growDays></value>
+	</Operation>
+
+	<!-- Drago: 10-20 IRL years. Hardy desert tree -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="Plant_TreeDrago"]/plant/growDays</xpath>
+		<value><growDays>20</growDays></value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="Plant_TreeDrago"]/plant/harvestYield</xpath>
+		<value><harvestYield>30</harvestYield></value>
+	</Operation>
+
+	<!-- Palm: 15-25 IRL years. Tropical, poor quality wood -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="Plant_TreePalm"]/plant/growDays</xpath>
+		<value><growDays>23</growDays></value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="Plant_TreePalm"]/plant/harvestYield</xpath>
+		<value><harvestYield>16</harvestYield></value>
+	</Operation>
+
+	<!-- Saguaro: 10-30 IRL years. Cactus, fibrous not timber -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="Plant_SaguaroCactus"]/plant/growDays</xpath>
+		<value><growDays>23</growDays></value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="Plant_SaguaroCactus"]/plant/harvestYield</xpath>
+		<value><harvestYield>8</harvestYield></value>
+	</Operation>
+
+	<!-- Birch: 20-30 IRL years. Medium hardwood -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="Plant_TreeBirch"]/plant/growDays</xpath>
+		<value><growDays>25</growDays></value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="Plant_TreeBirch"]/plant/harvestYield</xpath>
+		<value><harvestYield>39</harvestYield></value>
+	</Operation>
+
+	<!-- Pine: 25-35 IRL years. Medium conifer -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="Plant_TreePine"]/plant/growDays</xpath>
+		<value><growDays>27</growDays></value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="Plant_TreePine"]/plant/harvestYield</xpath>
+		<value><harvestYield>43</harvestYield></value>
+	</Operation>
+
+	<!-- Maple: 30-50 IRL years. Medium-slow hardwood -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="Plant_TreeMaple"]/plant/growDays</xpath>
+		<value><growDays>31</growDays></value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="Plant_TreeMaple"]/plant/harvestYield</xpath>
+		<value><harvestYield>50</harvestYield></value>
+	</Operation>
+
+	<!-- Teak: 40-60 IRL years. Premium tropical hardwood -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="Plant_TreeTeak"]/plant/growDays</xpath>
+		<value><growDays>35</growDays></value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="Plant_TreeTeak"]/plant/harvestYield</xpath>
+		<value><harvestYield>56</harvestYield></value>
+	</Operation>
+
+	<!-- Cypress: 40-70 IRL years. Slow swamp hardwood -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="Plant_TreeCypress"]/plant/growDays</xpath>
+		<value><growDays>36</growDays></value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="Plant_TreeCypress"]/plant/harvestYield</xpath>
+		<value><harvestYield>59</harvestYield></value>
+	</Operation>
+
+	<!-- Oak: 60-80 IRL years. Slow premium hardwood, highest yield -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="Plant_TreeOak"]/plant/growDays</xpath>
+		<value><growDays>41</growDays></value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="Plant_TreeOak"]/plant/harvestYield</xpath>
+		<value><harvestYield>67</harvestYield></value>
+	</Operation>
+
+</Patch>
