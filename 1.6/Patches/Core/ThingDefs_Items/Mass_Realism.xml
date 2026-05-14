@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<!-- ========== RESOURCES ========== -->
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="Steel"]/statBases/Mass</xpath>
+		<value><Mass>0.8</Mass></value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="WoodLog"]/statBases/Mass</xpath>
+		<value><Mass>0.7</Mass></value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="Uranium"]/statBases/Mass</xpath>
+		<value><Mass>2.0</Mass></value>
+	</Operation>
+
+	<!-- Stone blocks -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="BlocksSandstone"]/statBases/Mass</xpath>
+		<value><Mass>2.5</Mass></value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="BlocksGranite"]/statBases/Mass</xpath>
+		<value><Mass>3.5</Mass></value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="BlocksMarble"]/statBases/Mass</xpath>
+		<value><Mass>2.8</Mass></value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="BlocksSlate"]/statBases/Mass</xpath>
+		<value><Mass>2.3</Mass></value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="BlocksLimestone"]/statBases/Mass</xpath>
+		<value><Mass>2.6</Mass></value>
+	</Operation>
+
+	<!-- ========== SHELLS (inherit Mass from ShellBase, need Add) ========== -->
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="Shell_HighExplosive"]/statBases/Mass</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="Shell_HighExplosive"]/statBases/Mass</xpath>
+			<value><Mass>3.5</Mass></value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="Shell_HighExplosive"]/statBases</xpath>
+			<value><Mass>3.5</Mass></value>
+		</nomatch>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="Shell_Incendiary"]/statBases/Mass</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="Shell_Incendiary"]/statBases/Mass</xpath>
+			<value><Mass>3.0</Mass></value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="Shell_Incendiary"]/statBases</xpath>
+			<value><Mass>3.0</Mass></value>
+		</nomatch>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="Shell_EMP"]/statBases/Mass</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="Shell_EMP"]/statBases/Mass</xpath>
+			<value><Mass>2.5</Mass></value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="Shell_EMP"]/statBases</xpath>
+			<value><Mass>2.5</Mass></value>
+		</nomatch>
+	</Operation>
+
+	<!-- ========== FOOD ========== -->
+
+	<!-- MealSimple: inherits 0.44 from MealBaseIngredientless → 0.4 -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="MealSimple"]/statBases/Mass</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="MealSimple"]/statBases/Mass</xpath>
+			<value><Mass>0.4</Mass></value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="MealSimple"]/statBases</xpath>
+			<value><Mass>0.4</Mass></value>
+		</nomatch>
+	</Operation>
+
+	<!-- MealFine: inherits 0.44 → 0.5 -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="MealFine"]/statBases/Mass</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="MealFine"]/statBases/Mass</xpath>
+			<value><Mass>0.5</Mass></value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="MealFine"]/statBases</xpath>
+			<value><Mass>0.5</Mass></value>
+		</nomatch>
+	</Operation>
+
+	<!-- Pemmican: 0.018 → 0.04 -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="Pemmican"]/statBases/Mass</xpath>
+		<value><Mass>0.04</Mass></value>
+	</Operation>
+
+	<!-- Kibble: 0.015 → 0.04 -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="Kibble"]/statBases/Mass</xpath>
+		<value><Mass>0.04</Mass></value>
+	</Operation>
+
+</Patch>

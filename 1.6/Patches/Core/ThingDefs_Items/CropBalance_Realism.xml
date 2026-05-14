@@ -30,19 +30,19 @@
     </value>
   </Operation>
 
-  <!-- Mass: 0.03 → 0.05 (potatoes are heavy, water-dense) -->
+  <!-- Mass: 0.03 → 0.1 (potato ~100g each, water-dense) -->
   <Operation Class="PatchOperationConditional">
     <xpath>/Defs/ThingDef[defName="RawPotatoes"]/statBases/Mass</xpath>
     <match Class="PatchOperationReplace">
       <xpath>/Defs/ThingDef[defName="RawPotatoes"]/statBases/Mass</xpath>
       <value>
-        <Mass>0.05</Mass>
+        <Mass>0.1</Mass>
       </value>
     </match>
     <nomatch Class="PatchOperationAdd">
       <xpath>/Defs/ThingDef[defName="RawPotatoes"]/statBases</xpath>
       <value>
-        <Mass>0.05</Mass>
+        <Mass>0.1</Mass>
       </value>
     </nomatch>
   </Operation>
