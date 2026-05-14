@@ -21,7 +21,7 @@ packageId: `seedon.grounded`
 ### Животные (49 патчатся напрямую)
 Поля: `bodySize`, `MoveSpeed`, `lifeExpectancy`, `gestationPeriodDays`, `litterSizeCurve`, `foodType`, `baseHungerRate`, `manhunterOnDamageChance`, `MarketValue`
 
-MeatAmount/LeatherAmount — отдельный файл `MeatLeather_Scaling.xml` (формула: bodySize×100 / ×40)
+MeatAmount/LeatherAmount масштабируются автоматически через vanilla `StatPart_BodySize` (140×bodySize / 40×bodySize)
 
 ### Деревья (Trees_Realism.xml, 14 видов)
 growDays + harvestYield из реального возраста рубки (sqrt-scale):
@@ -71,6 +71,9 @@ cd Source && dotnet build -c Release
 CombatExtended (тела, бронь), VAE (все паки), Alpha Animals, Biotech, Odyssey
 
 ## Важные нюансы
+
+### ⚠️ MeatAmount/LeatherAmount — НЕ патчить через XML
+`MeatAmount` и `LeatherAmount` StatDef имеют `StatPart_BodySize` — финальное значение = `statBases.Value × bodySize`. Если задать MeatAmount в XML, bodySize умножится ДВАЖДЫ (bodySize² × base). Vanilla default (140 для мяса, 40 для кожи) × наш bodySize = адекватные числа.
 
 ### ⚠️ Животные с useMeatFrom — НЕ патчить MeatAmount
 Следующие животные используют `useMeatFrom` и наследуют мясо/кожу автоматически.

@@ -7,7 +7,7 @@ Pure XML + minimal DLL (50 lines, no Harmony). Real biology and physics in RimWo
 ## Features
 
 ### 🐾 Animals (49 species)
-Realistic stats from zoological data: body size, speed, lifespan, gestation, litter size, diet, hunger rate, temperature tolerance, manhunter chance. Meat and leather proportional to body size (bodySize×100 / ×40).
+Realistic stats from zoological data: body size, speed, lifespan, gestation, litter size, diet, hunger rate, temperature tolerance, manhunter chance. Meat and leather scale naturally with realistic body sizes.
 
 ### 🌳 Trees (14 species)
 Growth time and yield scaled from real timber maturation age. Sqrt-scaled to keep gameplay viable.
