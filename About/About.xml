@@ -8,14 +8,7 @@
   </supportedVersions>
   <packageId>seedon.grounded</packageId>
   <modVersion>1.0</modVersion>
-  <modDependencies>
-    <li>
-      <packageId>brrainz.harmony</packageId>
-      <displayName>Harmony</displayName>
-      <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2009463077</steamWorkshopUrl>
-    </li>
-  </modDependencies>
-  <description>Realistic stats overhaul with Harmony integration.
+  <description>Realistic stats overhaul. No Harmony required.
 
 Recalculates animal stats from real-world zoological data: body size, speed, lifespan, gestation, litter size, diet, temperature tolerance, meat/leather yield, manhunter chance, market value.
 
@@ -46,8 +39,5 @@ Compatible with Combat Extended, Vanilla Animals Expanded, Alpha Animals, Biotec
     <li>VanillaExpanded.VAEEndAndExt</li>
     <li>VanillaExpanded.VAEWaste</li>
     <li>sarg.alphaanimals</li>
-    <li>brrainz.harmony</li>
-    <li>cj.RimTalk</li>
-    <li>RP.RimTalk.PersonaDirector</li>
   </loadAfter>
 </ModMetaData>
