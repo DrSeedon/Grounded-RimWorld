@@ -97,17 +97,28 @@
 		</nomatch>
 	</Operation>
 
-	<!-- MealFine: inherits 0.44 → 0.5 -->
-	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/ThingDef[defName="MealFine"]/statBases/Mass</xpath>
-		<match Class="PatchOperationReplace">
-			<xpath>/Defs/ThingDef[defName="MealFine"]/statBases/Mass</xpath>
-			<value><Mass>0.5</Mass></value>
-		</match>
-		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="MealFine"]/statBases</xpath>
-			<value><Mass>0.5</Mass></value>
-		</nomatch>
+	<!-- MealFine: no local statBases — need to add the block first, then Mass -->
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<li Class="PatchOperationConditional">
+				<xpath>/Defs/ThingDef[defName="MealFine"]/statBases</xpath>
+				<nomatch Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="MealFine"]</xpath>
+					<value><statBases /></value>
+				</nomatch>
+			</li>
+			<li Class="PatchOperationConditional">
+				<xpath>/Defs/ThingDef[defName="MealFine"]/statBases/Mass</xpath>
+				<match Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="MealFine"]/statBases/Mass</xpath>
+					<value><Mass>0.5</Mass></value>
+				</match>
+				<nomatch Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="MealFine"]/statBases</xpath>
+					<value><Mass>0.5</Mass></value>
+				</nomatch>
+			</li>
+		</operations>
 	</Operation>
 
 	<!-- Pemmican: 0.018 → 0.04 -->
