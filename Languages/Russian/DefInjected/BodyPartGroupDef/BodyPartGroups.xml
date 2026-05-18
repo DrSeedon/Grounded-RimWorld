@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+  <RearLeftClaws.label>задние левые когти</RearLeftClaws.label>
+  <RearRightClaws.label>задние правые когти</RearRightClaws.label>
+  <RearLeftSpur.label>задняя левая шпора</RearLeftSpur.label>
+  <RearRightSpur.label>задняя правая шпора</RearRightSpur.label>
+  <LeftPincer.label>левая клешня</LeftPincer.label>
+  <RightPincer.label>правая клешня</RightPincer.label>
+  <Sting.label>жало</Sting.label>
+  <Arms.label>руки</Arms.label>
+</LanguageData>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+  <Ape.label>обезьяна</Ape.label>
+  <Arachnid.label>арахнид</Arachnid.label>
+  <BipedalAnimalWithPawsClawsAndTail.label>двуногое животное</BipedalAnimalWithPawsClawsAndTail.label>
+  <Theropod.label>двуногий динозавр</Theropod.label>
+  <Hexapod.label>гексапод</Hexapod.label>
+  <Hydra.label>гидра</Hydra.label>
+  <Jellyfish.label>медуза</Jellyfish.label>
+  <Megatardi.label>мегатарди</Megatardi.label>
+  <QuadrupedAnimalWithPawsAndTailAndSpur.label>четвероногое животное</QuadrupedAnimalWithPawsAndTailAndSpur.label>
+  <QuadrupedAnimalWithHoovesTailAndHorn.label>четвероногое животное</QuadrupedAnimalWithHoovesTailAndHorn.label>
+  <QuadrupedAnimalWithPawsAndHorn.label>четвероногое животное</QuadrupedAnimalWithPawsAndHorn.label>
+  <Wasteffalo_Body.label>двухголовое четвероногое</Wasteffalo_Body.label>
+  <ScorpionLike.label>скорпионоподобное тело</ScorpionLike.label>
+  <Slug.label>слизень</Slug.label>
+  <SnakeWithTwoLimbs.label>змея с двумя конечностями</SnakeWithTwoLimbs.label>
+  <CephalopodBiped.label>двуногий головоногий</CephalopodBiped.label>
+  <GooBody.label>слизь</GooBody.label>
+  <GooWithTeethBody.label>зубастая слизь</GooWithTeethBody.label>
+</LanguageData>

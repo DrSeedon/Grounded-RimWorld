@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+  <Thorax.label>грудная клетка</Thorax.label>
+  <InsectTail.label>хвост</InsectTail.label>
+  <InsectSting.label>жало</InsectSting.label>
+  <Pincer.label>клешня</Pincer.label>
+  <Tentacle.label>щупальце</Tentacle.label>
+  <Mantle.label>капюшон</Mantle.label>
+  <Protoplasm.label>протоплазма</Protoplasm.label>
+  <Nucleus.label>ядро</Nucleus.label>
+  <HydrogenSac.label>водородный мешок</HydrogenSac.label>
+</LanguageData>
